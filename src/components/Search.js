@@ -28,6 +28,8 @@ const Search = () => {
       const timeOutId = setTimeout(() => {
         if (term) search();
       }, 1000);
+
+      //UseEffect cleanup function
       return () => {
         clearTimeout(timeOutId);
       };
